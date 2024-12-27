@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="/_next/static/media/a34f9d1faa5f3315-s.p.woff2" as="font" crossorigin=""
+        type="font/woff2">
+    <link rel="preload" as="image" href="/logo.png">
+    <link rel="preload" as="image"
+        href="https://zknown-1251007641.cos.ap-guangzhou.myqcloud.com/images/20240130090120.png">
+    <link rel="preload" as="image" href="/hb_bottom.png">
+    <link rel="stylesheet" href="/_next/static/css/677eb3063c5fd540.css" data-precedence="next">
+    <link rel="preload" as="script" fetchpriority="low" href="/_next/static/chunks/webpack-74ff6ff2a738a8b9.js">
+    <script src="/_next/static/chunks/1547cac5-f93009c41dd6079b.js" async=""></script>
+    <script src="/_next/static/chunks/538-88767a5b415da085.js" async=""></script>
+    <script src="/_next/static/chunks/main-app-20699f2e74b0b2fd.js" async=""></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-L50J0T914F"></script>
+    <link rel="icon" href="/favicon.ico">
+    <title>AI 红包封面生成器 ｜ AI Cover</title>
+    <meta name="description" content="AI 红包封面生成器，利用 AI 技术生成高清精美的微信红包封面图片。">
+    <meta name="keywords" content="AI 红包封面生成器, 微信红包封面, 微信红包, AI 红包封面, AI Cover">
+    <link rel="canonical" href="https://aicover.design">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="128x128">
+    <meta name="next-size-adjust">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-L50J0T914F');
+    </script>
+    <script src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js" nomodule=""></script>
+    <style type="text/css">
+        html[dir=ltr],
+        [data-sonner-toaster][dir=ltr] {
+            --toast-icon-margin-start: -3px;
+            --toast-icon-margin-end: 4px;
+            --toast-svg-margin-start: -1px;
+            --toast-svg-margin-end: 0px;
+            --toast-button-margin-start: auto;
+            --toast-button-margin-end: 0;
+            --toast-close-button-start: 0;
+            --toast-close-button-end: unset;
+            --toast-close-button-transform: translate(-35%, -35%)
+        }
+
+        html[dir=rtl],
+        [data-sonner-toaster][dir=rtl] {
+            --toast-icon-margin-start: 4px;
+            --toast-icon-margin-end: -3px;
+            --toast-svg-margin-start: 0px;
+            --toast-svg-margin-end: -1px;
+            --toast-button-margin-start: 0;
+            --toast-button-margin-end: auto;
+            --toast-close-button-start: unset;
+            --toast-close-button-end: 0;
+            --toast-close-button-transform: translate(35%, -35%)
+        }
+
+        [data-sonner-toaster] {
+            position: fixed;
+            width: var(--width);
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            --gray1: hsl(0, 0%, 99%);
+            --gray2: hsl(0, 0%, 97.3%);
+            --gray3: hsl(0, 0%, 95.1%);
+            --gray4: hsl(0, 0%, 93%);
+            --gray5: hsl(0, 0%, 90.9%);
+            --gray6: hsl(0, 0%, 88.7%);
+            --gray7: hsl(0, 0%, 85.8%);
+            --gray8: hsl(0, 0%, 78%);
+            --gray9: hsl(0, 0%, 56.1%);
+            --gray10: hsl(0, 0%, 52.3%);
+            --gray11: hsl(0, 0%, 43.5%);
+            --gray12: hsl(0, 0%, 9%);
+            --border-radius: 8px;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            outline: none;
+            z-index: 999999999
+        }
+
+        [data-sonner-toaster][data-x-position=right] {
+            right: max(var(--offset), env(safe-area-inset-right))
+        }
+
+        [data-sonner-toaster][data-x-position=left] {
+            left: max(var(--offset), env(safe-area-inset-left))
+        }
+
+        [data-sonner-toaster][data-x-position=center] {
+            left: 50%;
+            transform: translate(-50%)
+        }
+
+        [data-sonner-toaster][data-y-position=top] {
+            top: max(var(--offset), env(safe-area-inset-top))
+        }
+
+        [data-sonner-toaster][data-y-position=bottom] {
+            bottom: max(var(--offset), env(safe-area-inset-bottom))
+        }
+
+        [data-sonner-toast] {
+            --y: translateY(100%);
+            --lift-amount: calc(var(--lift) * var(--gap));
+            z-index: var(--z-index);
+            position: absolute;
+            opacity: 0;
+            transform: var(--y);
+            touch-action: none;
+            will-change: transform, opacity, height;
+            transition: transform .4s, opacity .4s, height .4s, box-shadow .2s;
+            box-sizing: border-box;
+            outline: none;
+            overflow-wrap: anywhere
+        }
+
+        [data-sonner-toast][data-styled=true] {
+            padding: 16px;
+            background: var(--normal-bg);
+            border: 1px solid var(--normal-border);
+            color: var(--normal-text);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px #0000001a;
+            width: var(--width);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        [data-sonner-toast]:focus-visible {
+            box-shadow: 0 4px 12px #0000001a, 0 0 0 2px #0003
+        }
+
+        [data-sonner-toast][data-y-position=top] {
+            top: 0;
+            --y: translateY(-100%);
+            --lift: 1;
+            --lift-amount: calc(1 * var(--gap))
+        }
+
+        [data-sonner-toast][data-y-position=bottom] {
+            bottom: 0;
+            --y: translateY(100%);
+            --lift: -1;
+            --lift-amount: calc(var(--lift) * var(--gap))
+        }
+
+        [data-sonner-toast] [data-description] {
+            font-weight: 400;
+            line-height: 1.4;
+            color: inherit
+        }
+
+        [data-sonner-toast] [data-title] {
+            font-weight: 500;
+            line-height: 1.5;
+            color: inherit
+        }
+
+        [data-sonner-toast] [data-icon] {
+            display: flex;
+            height: 16px;
+            width: 16px;
+            position: relative;
+            justify-content: flex-start;
+            align-items: center;
+            flex-shrink: 0;
+            margin-left: var(--toast-icon-margin-start);
+            margin-right: var(--toast-icon-margin-end)
+        }
+
+        [data-sonner-toast][data-promise=true] [data-icon]>svg {
+            opacity: 0;
+            transform: scale(.8);
+            transform-origin: center;
+            animation: sonner-fade-in .3s ease forwards
+        }
+
+        [data-sonner-toast] [data-icon]>* {
+            flex-shrink: 0
+        }
+
+        [data-sonner-toast] [data-icon] svg {
+            margin-left: var(--toast-svg-margin-start);
+            margin-right: var(--toast-svg-margin-end)
+        }
+
+        [data-sonner-toast] [data-content] {
+            display: flex;
+            flex-direction: column;
+            gap: 2px
+        }
+
+        [data-sonner-toast] [data-button] {
+            border-radius: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+            height: 24px;
+            font-size: 12px;
+            color: var(--normal-bg);
+            background: var(--normal-text);
+            margin-left: var(--toast-button-margin-start);
+            margin-right: var(--toast-button-margin-end);
+            border: none;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            transition: opacity .4s, box-shadow .2s
+        }
+
+        [data-sonner-toast] [data-button]:focus-visible {
+            box-shadow: 0 0 0 2px #0006
+        }
+
+        [data-sonner-toast] [data-button]:first-of-type {
+            margin-left: var(--toast-button-margin-start);
+            margin-right: var(--toast-button-margin-end)
+        }
+
+        [data-sonner-toast] [data-cancel] {
+            color: var(--normal-text);
+            background: rgba(0, 0, 0, .08)
+        }
+
+        [data-sonner-toast][data-theme=dark] [data-cancel] {
+            background: rgba(255, 255, 255, .3)
+        }
+
+        [data-sonner-toast] [data-close-button] {
+            position: absolute;
+            left: var(--toast-close-button-start);
+            right: var(--toast-close-button-end);
+            top: 0;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            background: var(--gray1);
+            color: var(--gray12);
+            border: 1px solid var(--gray4);
+            transform: var(--toast-close-button-transform);
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+            transition: opacity .1s, background .2s, border-color .2s
+        }
+
+        [data-sonner-toast] [data-close-button]:focus-visible {
+            box-shadow: 0 4px 12px #0000001a, 0 0 0 2px #0003
+        }
+
+        [data-sonner-toast] [data-disabled=true] {
+            cursor: not-allowed
+        }
+
+        [data-sonner-toast]:hover [data-close-button]:hover {
+            background: var(--gray2);
+            border-color: var(--gray5)
+        }
+
+        [data-sonner-toast][data-swiping=true]:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%
+        }
+
+        [data-sonner-toast][data-y-position=top][data-swiping=true]:before {
+            bottom: 50%;
+            transform: scaleY(3) translateY(50%)
+        }
+
+        [data-sonner-toast][data-y-position=bottom][data-swiping=true]:before {
+            top: 50%;
+            transform: scaleY(3) translateY(-50%)
+        }
+
+        [data-sonner-toast][data-swiping=false][data-removed=true]:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            transform: scaleY(2)
+        }
+
+        [data-sonner-toast]:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: calc(var(--gap) + 1px);
+            bottom: 100%;
+            width: 100%
+        }
+
+        [data-sonner-toast][data-mounted=true] {
+            --y: translateY(0);
+            opacity: 1
+        }
+
+        [data-sonner-toast][data-expanded=false][data-front=false] {
+            --scale: var(--toasts-before) * .05 + 1;
+            --y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale)));
+            height: var(--front-toast-height)
+        }
+
+        [data-sonner-toast]>* {
+            transition: opacity .4s
+        }
+
+        [data-sonner-toast][data-expanded=false][data-front=false][data-styled=true]>* {
+            opacity: 0
+        }
+
+        [data-sonner-toast][data-visible=false] {
+            opacity: 0;
+            pointer-events: none
+        }
+
+        [data-sonner-toast][data-mounted=true][data-expanded=true] {
+            --y: translateY(calc(var(--lift) * var(--offset)));
+            height: var(--initial-height)
+        }
+
+        [data-sonner-toast][data-removed=true][data-front=true][data-swipe-out=false] {
+            --y: translateY(calc(var(--lift) * -100%));
+            opacity: 0
+        }
+
+        [data-sonner-toast][data-removed=true][data-front=false][data-swipe-out=false][data-expanded=true] {
+            --y: translateY(calc(var(--lift) * var(--offset) + var(--lift) * -100%));
+            opacity: 0
+        }
+
+        [data-sonner-toast][data-removed=true][data-front=false][data-swipe-out=false][data-expanded=false] {
+            --y: translateY(40%);
+            opacity: 0;
+            transition: transform .5s, opacity .2s
+        }
+
+        [data-sonner-toast][data-removed=true][data-front=false]:before {
+            height: calc(var(--initial-height) + 20%)
+        }
+
+        [data-sonner-toast][data-swiping=true] {
+            transform: var(--y) translateY(var(--swipe-amount, 0px));
+            transition: none
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-y-position=bottom],
+        [data-sonner-toast][data-swipe-out=true][data-y-position=top] {
+            animation: swipe-out .2s ease-out forwards
+        }
+
+        @keyframes swipe-out {
+            0% {
+                transform: translateY(calc(var(--lift) * var(--offset) + var(--swipe-amount)));
+                opacity: 1
+            }
+
+            to {
+                transform: translateY(calc(var(--lift) * var(--offset) + var(--swipe-amount) + var(--lift) * -100%));
+                opacity: 0
+            }
+        }
+
+        @media (max-width: 600px) {
+            [data-sonner-toaster] {
+                position: fixed;
+                --mobile-offset: 16px;
+                right: var(--mobile-offset);
+                left: var(--mobile-offset);
+                width: 100%
+            }
+
+            [data-sonner-toaster] [data-sonner-toast] {
+                left: 0;
+                right: 0;
+                width: calc(100% - 32px)
+            }
+
+            [data-sonner-toaster][data-x-position=left] {
+                left: var(--mobile-offset)
+            }
+
+            [data-sonner-toaster][data-y-position=bottom] {
+                bottom: 20px
+            }
+
+            [data-sonner-toaster][data-y-position=top] {
+                top: 20px
+            }
+
+            [data-sonner-toaster][data-x-position=center] {
+                left: var(--mobile-offset);
+                right: var(--mobile-offset);
+                transform: none
+            }
+        }
+
+        [data-sonner-toaster][data-theme=light] {
+            --normal-bg: #fff;
+            --normal-border: var(--gray4);
+            --normal-text: var(--gray12);
+            --success-bg: hsl(143, 85%, 96%);
+            --success-border: hsl(145, 92%, 91%);
+            --success-text: hsl(140, 100%, 27%);
+            --info-bg: hsl(208, 100%, 97%);
+            --info-border: hsl(221, 91%, 91%);
+            --info-text: hsl(210, 92%, 45%);
+            --warning-bg: hsl(49, 100%, 97%);
+            --warning-border: hsl(49, 91%, 91%);
+            --warning-text: hsl(31, 92%, 45%);
+            --error-bg: hsl(359, 100%, 97%);
+            --error-border: hsl(359, 100%, 94%);
+            --error-text: hsl(360, 100%, 45%)
+        }
+
+        [data-sonner-toaster][data-theme=light] [data-sonner-toast][data-invert=true] {
+            --normal-bg: #000;
+            --normal-border: hsl(0, 0%, 20%);
+            --normal-text: var(--gray1)
+        }
+
+        [data-sonner-toaster][data-theme=dark] [data-sonner-toast][data-invert=true] {
+            --normal-bg: #fff;
+            --normal-border: var(--gray3);
+            --normal-text: var(--gray12)
+        }
+
+        [data-sonner-toaster][data-theme=dark] {
+            --normal-bg: #000;
+            --normal-border: hsl(0, 0%, 20%);
+            --normal-text: var(--gray1);
+            --success-bg: hsl(150, 100%, 6%);
+            --success-border: hsl(147, 100%, 12%);
+            --success-text: hsl(150, 86%, 65%);
+            --info-bg: hsl(215, 100%, 6%);
+            --info-border: hsl(223, 100%, 12%);
+            --info-text: hsl(216, 87%, 65%);
+            --warning-bg: hsl(64, 100%, 6%);
+            --warning-border: hsl(60, 100%, 12%);
+            --warning-text: hsl(46, 87%, 65%);
+            --error-bg: hsl(358, 76%, 10%);
+            --error-border: hsl(357, 89%, 16%);
+            --error-text: hsl(358, 100%, 81%)
+        }
+
+        [data-rich-colors=true] [data-sonner-toast][data-type=success],
+        [data-rich-colors=true] [data-sonner-toast][data-type=success] [data-close-button] {
+            background: var(--success-bg);
+            border-color: var(--success-border);
+            color: var(--success-text)
+        }
+
+        [data-rich-colors=true] [data-sonner-toast][data-type=info],
+        [data-rich-colors=true] [data-sonner-toast][data-type=info] [data-close-button] {
+            background: var(--info-bg);
+            border-color: var(--info-border);
+            color: var(--info-text)
+        }
+
+        [data-rich-colors=true] [data-sonner-toast][data-type=warning],
+        [data-rich-colors=true] [data-sonner-toast][data-type=warning] [data-close-button] {
+            background: var(--warning-bg);
+            border-color: var(--warning-border);
+            color: var(--warning-text)
+        }
+
+        [data-rich-colors=true] [data-sonner-toast][data-type=error],
+        [data-rich-colors=true] [data-sonner-toast][data-type=error] [data-close-button] {
+            background: var(--error-bg);
+            border-color: var(--error-border);
+            color: var(--error-text)
+        }
+
+        .sonner-loading-wrapper {
+            --size: 16px;
+            height: var(--size);
+            width: var(--size);
+            position: absolute;
+            inset: 0;
+            z-index: 10
+        }
+
+        .sonner-loading-wrapper[data-visible=false] {
+            transform-origin: center;
+            animation: sonner-fade-out .2s ease forwards
+        }
+
+        .sonner-spinner {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            height: var(--size);
+            width: var(--size)
+        }
+
+        .sonner-loading-bar {
+            animation: sonner-spin 1.2s linear infinite;
+            background: var(--gray11);
+            border-radius: 6px;
+            height: 8%;
+            left: -10%;
+            position: absolute;
+            top: -3.9%;
+            width: 24%
+        }
+
+        .sonner-loading-bar:nth-child(1) {
+            animation-delay: -1.2s;
+            transform: rotate(.0001deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(2) {
+            animation-delay: -1.1s;
+            transform: rotate(30deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(3) {
+            animation-delay: -1s;
+            transform: rotate(60deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(4) {
+            animation-delay: -.9s;
+            transform: rotate(90deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(5) {
+            animation-delay: -.8s;
+            transform: rotate(120deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(6) {
+            animation-delay: -.7s;
+            transform: rotate(150deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(7) {
+            animation-delay: -.6s;
+            transform: rotate(180deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(8) {
+            animation-delay: -.5s;
+            transform: rotate(210deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(9) {
+            animation-delay: -.4s;
+            transform: rotate(240deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(10) {
+            animation-delay: -.3s;
+            transform: rotate(270deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(11) {
+            animation-delay: -.2s;
+            transform: rotate(300deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(12) {
+            animation-delay: -.1s;
+            transform: rotate(330deg) translate(146%)
+        }
+
+        @keyframes sonner-fade-in {
+            0% {
+                opacity: 0;
+                transform: scale(.8)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        @keyframes sonner-fade-out {
+            0% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(.8)
+            }
+        }
+
+        @keyframes sonner-spin {
+            0% {
+                opacity: 1
+            }
+
+            to {
+                opacity: .15
+            }
+        }
+
+        @media (prefers-reduced-motion) {
+
+            [data-sonner-toast],
+            [data-sonner-toast]>*,
+            .sonner-loading-bar {
+                transition: none !important;
+                animation: none !important
+            }
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+            transition: opacity .2s, transform .2s
+        }
+
+        .loader[data-visible=false] {
+            opacity: 0;
+            transform: scale(.8) translate(-50%, -50%)
+        }
+    </style>
+</head>
+
+<body class="__className_d65c78">
+    <div class="w-screen h-screen">
+        <header>
+            <div class="h-auto w-screen">
+                <nav class="font-inter mx-auto h-auto w-full max-w-[1600px] lg:relative lg:top-0">
+                    <div
+                        class="flex flex-row items-center px-6 py-8 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-8 xl:px-20">
+                        <a href="/" class="text-xl font-medium flex items-center"><img src="/logo.png"
+                                class="w-8 h-8 rounded-full mr-2" alt="logo"><span
+                                class="font-bold text-primary text-2xl">AI 红包封面</span></a>
+                        <div class="hidden md:flex ml-16"><a class="text-md font-normal leading-6 text-primary mx-4"
+                                href="/" target="_self">首页</a><a
+                                class="text-md font-normal leading-6 text-gray-800 mx-4" href="/pricing"
+                                target="_self">价格</a><a class="text-md font-normal leading-6 text-gray-800 mx-4"
+                                href="/covers/awesome" target="_self">精品</a><a
+                                class="text-md font-normal leading-6 text-gray-800 mx-4" href="/covers/brand"
+                                target="_self">品牌案例</a></div>
+                        <div class="flex-1"></div>
+                        <div class="flex flex-row items-center lg:flex lg:flex-row lg:space-x-3 lg:space-y-0">
+                            <div class="hidden md:block mr-4">
+                                <div class="mx-auto flex flex-row items-center"><a
+                                        href="https://github.com/all-in-aigc/aicover" target="_blank"
+                                        class="mx-3 flex max-w-[24px] flex-col items-center justify-center"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 16 16" class="text-lg" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                                            </path>
+                                        </svg></a><a
+                                        href="https://www.producthunt.com/posts/ai-red-envelope-cover-generator?utm_source=aicover.design"
+                                        target="_blank"
+                                        class="mx-3 flex max-w-[24px] flex-col items-center justify-center"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 512 512" class="text-xl" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M326.3 218.8c0 20.5-16.7 37.2-37.2 37.2h-70.3v-74.4h70.3c20.5 0 37.2 16.7 37.2 37.2zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-128.1-37.2c0-47.9-38.9-86.8-86.8-86.8H169.2v248h49.6v-74.4h70.3c47.9 0 86.8-38.9 86.8-86.8z">
+                                            </path>
+                                        </svg></a><a href="https://twitter.com/idoubicc" target="_blank"
+                                        class="mx-3 flex max-w-[24px] flex-col items-center justify-center"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 16 16" class="text-lg" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z">
+                                            </path>
+                                        </svg></a> <a href="https://mp.weixin.qq.com/s/4duIpeZkmqlKPa4jrcUdIA"
+                                        target="_blank"
+                                        class="mx-3 flex max-w-[24px] flex-col items-center justify-center"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 16 16" class="text-lg" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z">
+                                            </path>
+                                        </svg></a></div>
+                            </div><a class="cursor-pointer" href="/sign-in"><button
+                                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">登录</button></a>
+                        </div><a href="#" class="absolute right-5 lg:hidden"></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="w-full px-6">
+                <section class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-3xl md:text-6xl font-bold text-primary mt-8 md:mt-24">新年快乐，龙年大吉🐲</h1>
+                    <h2 class="text-2xl md:text-4xl my-8 text-secondary-foreground"><span
+                            class="text-primary">4418</span> 张使用 AI 生成的红包封面</h2>
+                </section>
+                <div class="relative max-w-2xl mx-auto mt-4 md:mt-16"><input type="text"
+                        class="mb-1 h-9 w-full rounded-md border border-solid border-primary px-3 py-6 text-sm text-[#333333] focus:border-primary"
+                        placeholder="输入要生成的红包封面描述" value=""><button
+                        class="relative right-0 top-[5px] w-full cursor-pointer rounded-md bg-primary border-primary px-6 py-2 text-center font-semibold text-white sm:absolute sm:right-[5px] sm:w-auto">生成封面</button>
+                </div>
+                <section>
+                    <div class="mx-auto max-w-7xl px-5 my-16">
+                        <div class="mx-auto w-full max-w-3xl text-center">
+                            <div class="mx-auto -mt-8 mb-8">
+                                <div class="block">
+                                    <div class="">
+                                        <nav class="flex items-center justify-center space-x-8" aria-label="Tabs"><a
+                                                href="/"
+                                                class="border-primary text-primary whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium"
+                                                aria-current="page">最新</a><a href="/covers/featured"
+                                                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">最热</a><a
+                                                href="/covers/random"
+                                                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">随机</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 lg:gap-12"><a
+                                href="/cover/78e11743-1a87-4f0a-b219-26d1e9a8cf1b"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="蜡笔小新"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F78e11743-1a87-4f0a-b219-26d1e9a8cf1b.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F78e11743-1a87-4f0a-b219-26d1e9a8cf1b.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F78e11743-1a87-4f0a-b219-26d1e9a8cf1b.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/5e950caf-0f3b-466b-a132-41b630fd308e"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="中秋"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F5e950caf-0f3b-466b-a132-41b630fd308e.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F5e950caf-0f3b-466b-a132-41b630fd308e.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F5e950caf-0f3b-466b-a132-41b630fd308e.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/c5142a28-5d14-4862-85ec-963582b0d4db"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="生日快乐"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fc5142a28-5d14-4862-85ec-963582b0d4db.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fc5142a28-5d14-4862-85ec-963582b0d4db.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fc5142a28-5d14-4862-85ec-963582b0d4db.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/63c2e04b-e819-4919-ae1d-57f7c53b632f"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="足球先生卡卡"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F63c2e04b-e819-4919-ae1d-57f7c53b632f.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F63c2e04b-e819-4919-ae1d-57f7c53b632f.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F63c2e04b-e819-4919-ae1d-57f7c53b632f.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/0b520293-ea5c-4278-a565-3ffd7c5900db"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="用于中秋节，封面要有月兔捣药这个画面，整体风格可爱，古风" loading="lazy" width="280" height="420"
+                                    decoding="async" data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F0b520293-ea5c-4278-a565-3ffd7c5900db.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F0b520293-ea5c-4278-a565-3ffd7c5900db.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F0b520293-ea5c-4278-a565-3ffd7c5900db.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/adb797d8-147c-41a5-801e-d0ce287e080a"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="中秋节"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fadb797d8-147c-41a5-801e-d0ce287e080a.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fadb797d8-147c-41a5-801e-d0ce287e080a.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fadb797d8-147c-41a5-801e-d0ce287e080a.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/bc63ce47-bc9a-4c2f-92a2-df421c6f2502"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="美女"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fbc63ce47-bc9a-4c2f-92a2-df421c6f2502.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fbc63ce47-bc9a-4c2f-92a2-df421c6f2502.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fbc63ce47-bc9a-4c2f-92a2-df421c6f2502.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/1df7a9de-5992-4ab7-b837-5f190422930e"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="炫酷"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F1df7a9de-5992-4ab7-b837-5f190422930e.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F1df7a9de-5992-4ab7-b837-5f190422930e.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F1df7a9de-5992-4ab7-b837-5f190422930e.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/7882e7b1-73f2-4b17-bcad-1672e8ea3628"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="中秋山河无恙"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F7882e7b1-73f2-4b17-bcad-1672e8ea3628.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F7882e7b1-73f2-4b17-bcad-1672e8ea3628.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F7882e7b1-73f2-4b17-bcad-1672e8ea3628.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/584d0769-832d-4c0d-a382-d58819ae13be"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="中秋月饼"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F584d0769-832d-4c0d-a382-d58819ae13be.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F584d0769-832d-4c0d-a382-d58819ae13be.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F584d0769-832d-4c0d-a382-d58819ae13be.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/2060fcb5-c3ff-4f05-a5a3-cb002b2421e0"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="重型ADV转载着3箱驰骋在西藏雪山脚下文字文案：山河图灵" loading="lazy" width="280" height="420"
+                                    decoding="async" data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F2060fcb5-c3ff-4f05-a5a3-cb002b2421e0.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F2060fcb5-c3ff-4f05-a5a3-cb002b2421e0.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F2060fcb5-c3ff-4f05-a5a3-cb002b2421e0.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/0a104b93-ae90-4114-9d91-381a5f1d095c"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="火影忍者"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F0a104b93-ae90-4114-9d91-381a5f1d095c.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F0a104b93-ae90-4114-9d91-381a5f1d095c.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F0a104b93-ae90-4114-9d91-381a5f1d095c.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/a84dcd67-021d-4e58-be66-b607e795702e"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="踢足球的男孩"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa84dcd67-021d-4e58-be66-b607e795702e.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa84dcd67-021d-4e58-be66-b607e795702e.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa84dcd67-021d-4e58-be66-b607e795702e.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/01ead1c8-5bdd-49af-938b-0619382b82e2"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="dog"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F01ead1c8-5bdd-49af-938b-0619382b82e2.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F01ead1c8-5bdd-49af-938b-0619382b82e2.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F01ead1c8-5bdd-49af-938b-0619382b82e2.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/cc252b8b-ecee-433f-874e-edb1e7a8bf78"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="可达鸭"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fcc252b8b-ecee-433f-874e-edb1e7a8bf78.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fcc252b8b-ecee-433f-874e-edb1e7a8bf78.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fcc252b8b-ecee-433f-874e-edb1e7a8bf78.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/35b136bb-5535-46e5-ba17-18816fcc99b7"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="迪士尼米老鼠"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F35b136bb-5535-46e5-ba17-18816fcc99b7.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F35b136bb-5535-46e5-ba17-18816fcc99b7.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F35b136bb-5535-46e5-ba17-18816fcc99b7.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/de8b502c-3992-41e7-8ff8-1e0519e7535f"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="九龙戏珠，中间写着大奇奇生日快乐！" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fde8b502c-3992-41e7-8ff8-1e0519e7535f.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fde8b502c-3992-41e7-8ff8-1e0519e7535f.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fde8b502c-3992-41e7-8ff8-1e0519e7535f.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/ba6e3e3c-3844-42cc-8ee3-36f85e87af40"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="九龙戏珠，中间写着大奇奇生日快乐！" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fba6e3e3c-3844-42cc-8ee3-36f85e87af40.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fba6e3e3c-3844-42cc-8ee3-36f85e87af40.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fba6e3e3c-3844-42cc-8ee3-36f85e87af40.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/f0f11682-e784-4ee6-ae67-e80dfdec0739"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="原神胡桃洛丽塔裙" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Ff0f11682-e784-4ee6-ae67-e80dfdec0739.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Ff0f11682-e784-4ee6-ae67-e80dfdec0739.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Ff0f11682-e784-4ee6-ae67-e80dfdec0739.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/0ca4c293-29ea-4ece-a3c7-0ab61d29193f"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="云想衣裳花想容，春风拂槛露华浓。若非群玉山头见，会向瑶台月下逢" loading="lazy" width="280" height="420"
+                                    decoding="async" data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F0ca4c293-29ea-4ece-a3c7-0ab61d29193f.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F0ca4c293-29ea-4ece-a3c7-0ab61d29193f.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F0ca4c293-29ea-4ece-a3c7-0ab61d29193f.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/67b67b4d-6aa6-4fd4-aacf-70ba2cd61829"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="狗狗坐上火箭飞向月球" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F67b67b4d-6aa6-4fd4-aacf-70ba2cd61829.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F67b67b4d-6aa6-4fd4-aacf-70ba2cd61829.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F67b67b4d-6aa6-4fd4-aacf-70ba2cd61829.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/9374e5f1-d325-4319-86ad-ee7c4fe49cb2"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="中秋，天上明月，思亲" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F9374e5f1-d325-4319-86ad-ee7c4fe49cb2.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F9374e5f1-d325-4319-86ad-ee7c4fe49cb2.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F9374e5f1-d325-4319-86ad-ee7c4fe49cb2.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/67f61b7a-47cb-4780-90db-d191883694fe"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="二次元美少女"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F67f61b7a-47cb-4780-90db-d191883694fe.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F67f61b7a-47cb-4780-90db-d191883694fe.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F67f61b7a-47cb-4780-90db-d191883694fe.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/b578dce8-0933-4664-86ff-19a29d1895bd"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="恭喜"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fb578dce8-0933-4664-86ff-19a29d1895bd.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fb578dce8-0933-4664-86ff-19a29d1895bd.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fb578dce8-0933-4664-86ff-19a29d1895bd.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/fe6fd656-898b-415b-91c5-8d670c31bc69"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="芝麻开门红包封面" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Ffe6fd656-898b-415b-91c5-8d670c31bc69.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Ffe6fd656-898b-415b-91c5-8d670c31bc69.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Ffe6fd656-898b-415b-91c5-8d670c31bc69.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/2bba1cdd-50c4-405f-91af-552680b3a3df"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="小女孩"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F2bba1cdd-50c4-405f-91af-552680b3a3df.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F2bba1cdd-50c4-405f-91af-552680b3a3df.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F2bba1cdd-50c4-405f-91af-552680b3a3df.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/36d4d8c0-1853-4523-9f2f-7dbe5806904b"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="黑猫辟邪!厄运退退退!" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F36d4d8c0-1853-4523-9f2f-7dbe5806904b.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F36d4d8c0-1853-4523-9f2f-7dbe5806904b.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F36d4d8c0-1853-4523-9f2f-7dbe5806904b.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/03bc23c6-c119-4d61-8423-ccf02b6fab85"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="Jadilah seperti ahli yang dapat mengerti dengan pesan saya. Saya ingin membuat gambar Seorang lelaki yang memegang pedang dan tombak serta dengan tamengnya "
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F03bc23c6-c119-4d61-8423-ccf02b6fab85.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F03bc23c6-c119-4d61-8423-ccf02b6fab85.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F03bc23c6-c119-4d61-8423-ccf02b6fab85.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/dfd41a39-f016-4126-a44c-99524b5db33b"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="loopy"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fdfd41a39-f016-4126-a44c-99524b5db33b.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fdfd41a39-f016-4126-a44c-99524b5db33b.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fdfd41a39-f016-4126-a44c-99524b5db33b.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/a2ead150-e42f-4f67-822e-516f544a585b"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="小漠"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa2ead150-e42f-4f67-822e-516f544a585b.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa2ead150-e42f-4f67-822e-516f544a585b.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa2ead150-e42f-4f67-822e-516f544a585b.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/e47e6370-adc9-45da-b7b0-5956cf7f088b"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="老虎和龙"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fe47e6370-adc9-45da-b7b0-5956cf7f088b.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fe47e6370-adc9-45da-b7b0-5956cf7f088b.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fe47e6370-adc9-45da-b7b0-5956cf7f088b.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/6f1c9218-e1ff-44fd-a42f-e034c11a64af"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="悟空"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F6f1c9218-e1ff-44fd-a42f-e034c11a64af.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F6f1c9218-e1ff-44fd-a42f-e034c11a64af.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F6f1c9218-e1ff-44fd-a42f-e034c11a64af.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/72ce7e89-a522-4c04-bd0b-f3fc49518c6e"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="赛博朋克风格的女孩在玩计算机" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F72ce7e89-a522-4c04-bd0b-f3fc49518c6e.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F72ce7e89-a522-4c04-bd0b-f3fc49518c6e.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F72ce7e89-a522-4c04-bd0b-f3fc49518c6e.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/c82e3f07-c5a8-463d-99a9-03afed9e8784"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="相亲相爱一家人"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fc82e3f07-c5a8-463d-99a9-03afed9e8784.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fc82e3f07-c5a8-463d-99a9-03afed9e8784.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fc82e3f07-c5a8-463d-99a9-03afed9e8784.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/942f3905-f338-4e69-ab3c-16a817e05ee6"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="el rostro de cristo" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F942f3905-f338-4e69-ab3c-16a817e05ee6.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F942f3905-f338-4e69-ab3c-16a817e05ee6.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F942f3905-f338-4e69-ab3c-16a817e05ee6.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/eef49dcb-1e70-46c6-acf4-cb14272ce37b"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="林猪猪"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Feef49dcb-1e70-46c6-acf4-cb14272ce37b.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Feef49dcb-1e70-46c6-acf4-cb14272ce37b.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Feef49dcb-1e70-46c6-acf4-cb14272ce37b.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/73bc32cd-67cd-443a-8fb6-7f5aa6ffcc6b"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="蜡笔小新"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F73bc32cd-67cd-443a-8fb6-7f5aa6ffcc6b.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F73bc32cd-67cd-443a-8fb6-7f5aa6ffcc6b.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F73bc32cd-67cd-443a-8fb6-7f5aa6ffcc6b.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/e96d7663-1abe-44d0-badf-7fda4d21b49c"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="中秋"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fe96d7663-1abe-44d0-badf-7fda4d21b49c.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fe96d7663-1abe-44d0-badf-7fda4d21b49c.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fe96d7663-1abe-44d0-badf-7fda4d21b49c.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/db018df4-4550-49b7-b3e5-d03dceaab0f6"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="宝宝"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fdb018df4-4550-49b7-b3e5-d03dceaab0f6.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fdb018df4-4550-49b7-b3e5-d03dceaab0f6.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fdb018df4-4550-49b7-b3e5-d03dceaab0f6.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/a6771cf1-853e-49bb-9196-3a91879754a9"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="一个老爷爷，坐在地上，身在一片果园，周围围满了苹果" loading="lazy" width="280" height="420"
+                                    decoding="async" data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa6771cf1-853e-49bb-9196-3a91879754a9.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa6771cf1-853e-49bb-9196-3a91879754a9.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa6771cf1-853e-49bb-9196-3a91879754a9.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/300856e3-dd27-4323-8f72-c3cb3f9626f5"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="视错觉元素，山，丛林" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F300856e3-dd27-4323-8f72-c3cb3f9626f5.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F300856e3-dd27-4323-8f72-c3cb3f9626f5.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F300856e3-dd27-4323-8f72-c3cb3f9626f5.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/3a14b6b1-4732-4fb4-bdf6-e2b06324023f"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="小笼包"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F3a14b6b1-4732-4fb4-bdf6-e2b06324023f.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F3a14b6b1-4732-4fb4-bdf6-e2b06324023f.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F3a14b6b1-4732-4fb4-bdf6-e2b06324023f.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/fd5f699a-4420-40ad-a4d2-5bfa35d96c00"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="女生"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Ffd5f699a-4420-40ad-a4d2-5bfa35d96c00.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Ffd5f699a-4420-40ad-a4d2-5bfa35d96c00.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Ffd5f699a-4420-40ad-a4d2-5bfa35d96c00.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/92369cc5-8fe5-4f85-8b76-d98278876fbb"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="七夕快乐"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F92369cc5-8fe5-4f85-8b76-d98278876fbb.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F92369cc5-8fe5-4f85-8b76-d98278876fbb.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F92369cc5-8fe5-4f85-8b76-d98278876fbb.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/93de2747-3e46-4061-bca3-6dfbb64c525b"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="那朵花"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F93de2747-3e46-4061-bca3-6dfbb64c525b.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F93de2747-3e46-4061-bca3-6dfbb64c525b.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F93de2747-3e46-4061-bca3-6dfbb64c525b.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/7ccff5b8-208b-41f8-86e1-8161a51cdd37"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="离离原上草"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F7ccff5b8-208b-41f8-86e1-8161a51cdd37.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F7ccff5b8-208b-41f8-86e1-8161a51cdd37.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F7ccff5b8-208b-41f8-86e1-8161a51cdd37.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/7c4ce077-4a3c-429b-a1bd-8b3aa2086b54"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="娜美"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F7c4ce077-4a3c-429b-a1bd-8b3aa2086b54.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F7c4ce077-4a3c-429b-a1bd-8b3aa2086b54.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F7c4ce077-4a3c-429b-a1bd-8b3aa2086b54.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/506a60e0-b8f9-4f7c-bf5e-70a4a0e39e3c"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="ลิง"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F506a60e0-b8f9-4f7c-bf5e-70a4a0e39e3c.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F506a60e0-b8f9-4f7c-bf5e-70a4a0e39e3c.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F506a60e0-b8f9-4f7c-bf5e-70a4a0e39e3c.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/8c97acfe-21c1-427e-99e8-8d179d562961"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="一个穿黑丝的美女" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F8c97acfe-21c1-427e-99e8-8d179d562961.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F8c97acfe-21c1-427e-99e8-8d179d562961.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F8c97acfe-21c1-427e-99e8-8d179d562961.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/4fc5f446-3ab5-4b76-8bb9-16776237d29c"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="中大奖的红包封面" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F4fc5f446-3ab5-4b76-8bb9-16776237d29c.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F4fc5f446-3ab5-4b76-8bb9-16776237d29c.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F4fc5f446-3ab5-4b76-8bb9-16776237d29c.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/a16da96c-5193-4d48-b362-59e3d917ce2f"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="土地公"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa16da96c-5193-4d48-b362-59e3d917ce2f.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa16da96c-5193-4d48-b362-59e3d917ce2f.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fa16da96c-5193-4d48-b362-59e3d917ce2f.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/011aa50a-cf02-48e4-8a61-9c6499a83d56"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="土地公"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F011aa50a-cf02-48e4-8a61-9c6499a83d56.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F011aa50a-cf02-48e4-8a61-9c6499a83d56.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F011aa50a-cf02-48e4-8a61-9c6499a83d56.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/3cca06b5-a7b9-4d5d-ba1b-d4508fd45f40"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="中国少年合唱比赛第一名" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F3cca06b5-a7b9-4d5d-ba1b-d4508fd45f40.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F3cca06b5-a7b9-4d5d-ba1b-d4508fd45f40.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F3cca06b5-a7b9-4d5d-ba1b-d4508fd45f40.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/01a42037-4e90-4f91-b5ef-3f9eca1a5f8c"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="科技感十足的赛博朋克人" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F01a42037-4e90-4f91-b5ef-3f9eca1a5f8c.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F01a42037-4e90-4f91-b5ef-3f9eca1a5f8c.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F01a42037-4e90-4f91-b5ef-3f9eca1a5f8c.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/da447228-42bc-4fe3-9ac1-8f3d43e27bf8"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="四只可爱的大熊猫打麻将" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fda447228-42bc-4fe3-9ac1-8f3d43e27bf8.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fda447228-42bc-4fe3-9ac1-8f3d43e27bf8.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fda447228-42bc-4fe3-9ac1-8f3d43e27bf8.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/1a9b6210-19df-4279-8662-1cee686151fb"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="龙年大吉"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F1a9b6210-19df-4279-8662-1cee686151fb.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F1a9b6210-19df-4279-8662-1cee686151fb.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F1a9b6210-19df-4279-8662-1cee686151fb.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/8623cb26-98f1-4e8d-8f3a-2075858ba700"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="英语语法培训"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F8623cb26-98f1-4e8d-8f3a-2075858ba700.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F8623cb26-98f1-4e8d-8f3a-2075858ba700.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F8623cb26-98f1-4e8d-8f3a-2075858ba700.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/b8ea7beb-1b2e-4f03-8e9c-08a7737d180f"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="美女"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fb8ea7beb-1b2e-4f03-8e9c-08a7737d180f.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fb8ea7beb-1b2e-4f03-8e9c-08a7737d180f.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2Fb8ea7beb-1b2e-4f03-8e9c-08a7737d180f.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/90e72a3e-665b-4061-8bdb-010cf9e8a1ce"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img alt="花朵"
+                                    loading="lazy" width="280" height="420" decoding="async" data-nimg="1"
+                                    class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F90e72a3e-665b-4061-8bdb-010cf9e8a1ce.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F90e72a3e-665b-4061-8bdb-010cf9e8a1ce.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F90e72a3e-665b-4061-8bdb-010cf9e8a1ce.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a><a
+                                href="/cover/516fc628-45f5-433d-82bf-9428879dbaa8"
+                                class="relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"><img
+                                    alt="happy dog" loading="lazy" width="280" height="420" decoding="async"
+                                    data-nimg="1" class="w-full rounded-lg" style="color:transparent"
+                                    srcset="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F516fc628-45f5-433d-82bf-9428879dbaa8.png&amp;w=384&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F516fc628-45f5-433d-82bf-9428879dbaa8.png&amp;w=640&amp;q=75 2x"
+                                    src="/_next/image?url=https%3A%2F%2Fr2.trys.ai%2Fcovers%2F516fc628-45f5-433d-82bf-9428879dbaa8.png&amp;w=640&amp;q=75"><img
+                                    src="/hb_bottom.png" class="absolute bottom-0" alt=""></a></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <section>
+            <div class="w-screen flex-col px-6 py-20 lg:flex lg:px-10 xl:px-24">
+                <div class="lg:flex lg:flex-row lg:justify-between">
+                    <div>
+                        <p>AI Cover</p>
+                        <p class="font-inter mt-4 max-w-[350px] text-base font-light text-gray-500">AI 红包封面生成器</p>
+                        <div class="mb-8 mt-6">
+                            <div class="mx-auto flex flex-row items-center"><a
+                                    href="https://github.com/all-in-aigc/aicover" target="_blank"
+                                    class="mx-3 flex max-w-[24px] flex-col items-center justify-center"><svg
+                                        stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                        class="text-lg" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                                        </path>
+                                    </svg></a><a
+                                    href="https://www.producthunt.com/posts/ai-red-envelope-cover-generator?utm_source=aicover.design"
+                                    target="_blank"
+                                    class="mx-3 flex max-w-[24px] flex-col items-center justify-center"><svg
+                                        stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                        class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M326.3 218.8c0 20.5-16.7 37.2-37.2 37.2h-70.3v-74.4h70.3c20.5 0 37.2 16.7 37.2 37.2zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-128.1-37.2c0-47.9-38.9-86.8-86.8-86.8H169.2v248h49.6v-74.4h70.3c47.9 0 86.8-38.9 86.8-86.8z">
+                                        </path>
+                                    </svg></a><a href="https://twitter.com/idoubicc" target="_blank"
+                                    class="mx-3 flex max-w-[24px] flex-col items-center justify-center"><svg
+                                        stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                        class="text-lg" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z">
+                                        </path>
+                                    </svg></a> <a href="https://mp.weixin.qq.com/s/4duIpeZkmqlKPa4jrcUdIA"
+                                    target="_blank"
+                                    class="mx-3 flex max-w-[24px] flex-col items-center justify-center"><svg
+                                        stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                        class="text-lg" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z">
+                                        </path>
+                                    </svg></a></div>
+                        </div>
+                    </div>
+                    <div class="flex grow flex-row flex-wrap lg:mx-10 lg:flex-nowrap lg:justify-center">
+                        <div
+                            class="my-5 mr-8 flex max-w-[200px] grow basis-[100px] flex-col space-y-5 lg:mx-10 lg:mt-0">
+                            <p class="font-inter font-medium text-black">其他作品</p><a
+                                href="https://gpts.works?utm_source=aicover.design" target="_blank"
+                                class="font-inter font-light text-gray-500">GPTs Works</a><a
+                                href="https://thinkany.ai?utm_source=aicover.design" target="_blank"
+                                class="font-inter font-light text-gray-500">ThinkAny AI Search</a><a
+                                href="https://heybeauty.ai?utm_source=aicover.design" target="_blank"
+                                class="font-inter font-light text-gray-500">HeyBeauty AI Try-On</a><a
+                                href="https://pagen.so?utm_source=aicover.design" target="_blank"
+                                class="font-inter font-light text-gray-500">Pagen AI</a>
+                        </div>
+                        <div
+                            class="my-5 mr-8 flex max-w-[200px] grow basis-[100px] flex-col space-y-5 lg:mx-10 lg:mt-0">
+                            <p class="font-inter font-medium text-black">友情链接</p><a href="https://idoubi.cc/about/"
+                                target="_blank" class="font-inter font-light text-gray-500">艾逗笔</a><a
+                                href="https://mp.weixin.qq.com/s/4duIpeZkmqlKPa4jrcUdIA" target="_blank"
+                                class="font-inter font-light text-gray-500">全栈开发课</a><a
+                                href="https://mp.weixin.qq.com/s/4AIX8tGxRENukXf1srnRBA" target="_blank"
+                                class="font-inter font-light text-gray-500">AI 红包封面开发故事</a><a
+                                href="https://cover.weixin.qq.com/cgi-bin/mmcover-bin/readtemplate?t=page/index#/doc?page=design&amp;index=-1"
+                                target="_blank" class="font-inter font-light text-gray-500">微信红包封面制作教程</a>
+                        </div>
+                    </div>
+                    <div class="mt-10 flex flex-col lg:mt-0">
+                        <div class="mb-4 flex flex-col items-center">
+                            <p class="font-inter font-medium text-black"></p>
+                            <p class="font-inter ml-4 text-black"><img
+                                    src="https://zknown-1251007641.cos.ap-guangzhou.myqcloud.com/images/20240130090120.png"
+                                    alt="qrcode" width="250" height="400"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-auto my-12 w-full border border-[#E4E4E7] lg:my-20"></div>
+                <div>
+                    <p class="font-inter text-center text-sm text-gray-500 lg:mt-0">© Copyright 2024.<!-- --> <a
+                            href="https://aicover.design" target="_blank"
+                            class="text-primary hidden md:inline-block">aicover.design</a> <!-- -->All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="/_next/static/chunks/webpack-74ff6ff2a738a8b9.js" async=""></script>
+    <script>(self.__next_f = self.__next_f || []).push([0]); self.__next_f.push([2, null])</script>
+    <script>self.__next_f.push([1, "1:HL[\"/_next/static/media/a34f9d1faa5f3315-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/_next/static/css/677eb3063c5fd540.css\",\"style\"]\n0:\"$L3\"\n"])</script>
+    <script>self.__next_f.push([1, "4:I[9444,[],\"\"]\n7:I[964,[\"911\",\"static/chunks/cff26bbf-0bf982f4a3a8f40e.js\",\"543\",\"static/chunks/a9765c8d-a56a8d9b863a7682.js\",\"405\",\"static/chunks/405-ae139141700e15d9.js\",\"494\",\"static/chunks/494-c4abc2cca44be1c3.js\",\"386\",\"static/chunks/386-03dd6362eeab0a7e.js\",\"835\",\"static/chunks/835-f78bfe4ace6e0aad.js\",\"534\",\"static/chunks/app/(default)/layout-78b83daaec1f4efa.js\"],\"\"]\n8:I[383,[],\"\"]\n9:I[889,[],\"\"]\na:I[8225,[\"405\",\"static/chunks/405-ae139141700e15d9.js\",\"386\",\"static/chunks/386-03dd6362eeab0a7e.js\",\""])</script>
+    <script>self.__next_f.push([1, "185\",\"static/chunks/app/layout-5f9dccc572b5ddc1.js\"],\"ClientClerkProvider\"]\nb:I[7405,[\"405\",\"static/chunks/405-ae139141700e15d9.js\",\"386\",\"static/chunks/386-03dd6362eeab0a7e.js\",\"185\",\"static/chunks/app/layout-5f9dccc572b5ddc1.js\"],\"Toaster\"]\nd:I[3578,[],\"\"]\ne:[]\n3:[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/677eb3063c5fd540.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"$L4\",null,{\"buildId\":\"TJzhBDuczamkmz4HGlKwx\",\"assetPrefix\":\"\",\"initialCanonicalUrl\":\"/\",\"initialTree\":[\"\",{\"children\":[\"(default)\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"(default)\",{\"children\":[\"__PAGE__\",{},[\"$L5\",\"$L6\",null]]},[null,[\"$\",\"$L7\",null,{\"children\":[\"$\",\"$L8\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"(default)\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"styles\":null}],\"params\":{}}],null]]},[null,[\"$\",\"$La\",null,{\"frontendApi\":\"\",\"publishableKey\":\"pk_live_Y2xlcmsuYWljb3Zlci5kZXNpZ24k\",\"clerkJSUrl\":\"$undefined\",\"clerkJSVersion\":\"$undefined\",\"proxyUrl\":\"\",\"domain\":\"\",\"isSatellite\":false,\"signInUrl\":\"/sign-in\",\"signUpUrl\":\"/sign-up\",\"afterSignInUrl\":\"/\",\"afterSignUpUrl\":\"/\",\"sdkMetadata\":{\"name\":\"@clerk/nextjs\",\"version\":\"4.29.5\"},\"initialState\":{\"sessionClaims\":null,\"sessionId\":null,\"session\":null,\"userId\":null,\"user\":null,\"actor\":null,\"orgId\":null,\"orgRole\":null,\"orgSlug\":null,\"orgPermissions\":null,\"organization\":null},\"children\":[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"icon\",\"href\":\"/favicon.ico\"}],[\"$\",\"script\",null,{\"async\":true,\"src\":\"https://www.googletagmanager.com/gtag/js?id=G-L50J0T914F\"}],[\"$\",\"script\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"\\n                      window.dataLayer = window.dataLayer || [];\\n                      function gtag(){dataLayer.push(arguments);}\\n                      gtag('js', new Date());\\n                    \\n                      gtag('config', 'G-L50J0T914F');\\n                      \"}}]]}],[\"$\",\"body\",null,{\"className\":\"__className_d65c78\",\"children\":[[\"$\",\"$Lb\",null,{\"position\":\"top-center\",\"richColors\":true}],[\"$\",\"$L8\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"h1\",null,{\"children\":\"404 - Page Not Found\"}],[\"$\",\"p\",null,{\"children\":\"Sorry, the page you are looking for does not exist.\"}]]}],\"notFoundStyles\":[],\"styles\":null}]]}]]}]}],null]],\"initialHead\":[false,\"$Lc\"],\"globalErrorComponent\":\"$d\",\"missingSlots\":\"$We\"}]]\n"])</script>
+    <script>self.__next_f.push([1, "c:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"AI 红包封面生成器 ｜ AI Cover\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"AI 红包封面生成器，利用 AI 技术生成高清精美的微信红包封面图片。\"}],[\"$\",\"meta\",\"4\",{\"name\":\"keywords\",\"content\":\"AI 红包封面生成器, 微信红包封面, 微信红包, AI 红包封面, AI Cover\"}],[\"$\",\"link\",\"5\",{\"rel\":\"canonical\",\"href\":\"https://aicover.design\"}],[\"$\",\"link\",\"6\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"128x128\"}],[\"$\",\"meta\",\"7\",{\"name\":\"next-size-adjust\"}]]\n"])</script>
+    <script>self.__next_f.push([1, "5:null\n"])</script>
+    <script>self.__next_f.push([1, "10:I[1424,[\"911\",\"static/chunks/cff26bbf-0bf982f4a3a8f40e.js\",\"405\",\"static/chunks/405-ae139141700e15d9.js\",\"494\",\"static/chunks/494-c4abc2cca44be1c3.js\",\"329\",\"static/chunks/329-aa4a602713eab6cf.js\",\"772\",\"static/chunks/app/(default)/page-2320736b3502d4d7.js\"],\"\"]\n6:[\"$\",\"div\",null,{\"className\":\"w-full px-6\",\"children\":[\"$Lf\",[\"$\",\"$L10\",null,{}],\"$L11\"]}]\n"])</script>
+    <script>self.__next_f.push([1, "12:I[6904,[\"911\",\"static/chunks/cff26bbf-0bf982f4a3a8f40e.js\",\"405\",\"static/chunks/405-ae139141700e15d9.js\",\"494\",\"static/chunks/494-c4abc2cca44be1c3.js\",\"329\",\"static/chunks/329-aa4a602713eab6cf.js\",\"772\",\"static/chunks/app/(default)/page-2320736b3502d4d7.js\"],\"Image\"]\n"])</script>
+    <script>self.__next_f.push([1, "11:[\"$\",\"section\",null,{\"children\":[\"$\",\"div\",null,{\"className\":\"mx-auto max-w-7xl px-5 my-16\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mx-auto w-full max-w-3xl text-center\",\"children\":[\"$\",\"div\",null,{\"className\":\"mx-auto -mt-8 mb-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"block\",\"children\":[\"$\",\"div\",null,{\"className\":\"\",\"children\":[\"$\",\"nav\",null,{\"className\":\"flex items-center justify-center space-x-8\",\"aria-label\":\"Tabs\",\"children\":[[\"$\",\"a\",\"最新\",{\"href\":\"/\",\"className\":\"border-primary text-primary whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium\",\"aria-current\":\"page\",\"children\":\"最新\"}],[\"$\",\"a\",\"最热\",{\"href\":\"/covers/featured\",\"className\":\"border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium\",\"aria-current\":\"$undefined\",\"children\":\"最热\"}],[\"$\",\"a\",\"随机\",{\"href\":\"/covers/random\",\"className\":\"border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium\",\"aria-current\":\"$undefined\",\"children\":\"随机\"}]]}]}]}]}]}],[\"$\",\"div\",null,{\"className\":\"grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 lg:gap-12\",\"children\":[[\"$\",\"a\",\"0\",{\"href\":\"/cover/78e11743-1a87-4f0a-b219-26d1e9a8cf1b\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/78e11743-1a87-4f0a-b219-26d1e9a8cf1b.png\",\"alt\":\"蜡笔小新\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"1\",{\"href\":\"/cover/5e950caf-0f3b-466b-a132-41b630fd308e\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/5e950caf-0f3b-466b-a132-41b630fd308e.png\",\"alt\":\"中秋\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"2\",{\"href\":\"/cover/c5142a28-5d14-4862-85ec-963582b0d4db\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/c5142a28-5d14-4862-85ec-963582b0d4db.png\",\"alt\":\"生日快乐\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"3\",{\"href\":\"/cover/63c2e04b-e819-4919-ae1d-57f7c53b632f\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/63c2e04b-e819-4919-ae1d-57f7c53b632f.png\",\"alt\":\"足球先生卡卡\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"4\",{\"href\":\"/cover/0b520293-ea5c-4278-a565-3ffd7c5900db\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/0b520293-ea5c-4278-a565-3ffd7c5900db.png\",\"alt\":\"用于中秋节，封面要有月兔捣药这个画面，整体风格可爱，古风\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"5\",{\"href\":\"/cover/adb797d8-147c-41a5-801e-d0ce287e080a\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/adb797d8-147c-41a5-801e-d0ce287e080a.png\",\"alt\":\"中秋节\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"6\",{\"href\":\"/cover/bc63ce47-bc9a-4c2f-92a2-df421c6f2502\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/bc63ce47-bc9a-4c2f-92a2-df421c6f2502.png\",\"alt\":\"美女\",\"width\":\"280\",\"height\":\"420"])</script>
+    <script>self.__next_f.push([1, "\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"7\",{\"href\":\"/cover/1df7a9de-5992-4ab7-b837-5f190422930e\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/1df7a9de-5992-4ab7-b837-5f190422930e.png\",\"alt\":\"炫酷\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"8\",{\"href\":\"/cover/7882e7b1-73f2-4b17-bcad-1672e8ea3628\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/7882e7b1-73f2-4b17-bcad-1672e8ea3628.png\",\"alt\":\"中秋山河无恙\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"9\",{\"href\":\"/cover/584d0769-832d-4c0d-a382-d58819ae13be\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/584d0769-832d-4c0d-a382-d58819ae13be.png\",\"alt\":\"中秋月饼\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"10\",{\"href\":\"/cover/2060fcb5-c3ff-4f05-a5a3-cb002b2421e0\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/2060fcb5-c3ff-4f05-a5a3-cb002b2421e0.png\",\"alt\":\"重型ADV转载着3箱驰骋在西藏雪山脚下文字文案：山河图灵\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"11\",{\"href\":\"/cover/0a104b93-ae90-4114-9d91-381a5f1d095c\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/0a104b93-ae90-4114-9d91-381a5f1d095c.png\",\"alt\":\"火影忍者\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"12\",{\"href\":\"/cover/a84dcd67-021d-4e58-be66-b607e795702e\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/a84dcd67-021d-4e58-be66-b607e795702e.png\",\"alt\":\"踢足球的男孩\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"13\",{\"href\":\"/cover/01ead1c8-5bdd-49af-938b-0619382b82e2\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/01ead1c8-5bdd-49af-938b-0619382b82e2.png\",\"alt\":\"dog\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"14\",{\"href\":\"/cover/cc252b8b-ecee-433f-874e-edb1e7a8bf78\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/cc252b8b-ecee-433f-874e-edb1e7a8bf78.png\",\"alt\":\"可达鸭\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"15\",{\"href\":\"/cover/35b136bb-5535-46e5-ba17-18816fcc99b7\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/35b136bb-5535-46e5-ba17-18816fcc99b7.png\",\"alt\":\"迪士尼米老鼠\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"16\",{\"href\":\"/cover/de8b502c-3992-41e7-8ff8-1e0519e7535f\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer"])</script>
+    <script>self.__next_f.push([1, "\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/de8b502c-3992-41e7-8ff8-1e0519e7535f.png\",\"alt\":\"九龙戏珠，中间写着大奇奇生日快乐！\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"17\",{\"href\":\"/cover/ba6e3e3c-3844-42cc-8ee3-36f85e87af40\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/ba6e3e3c-3844-42cc-8ee3-36f85e87af40.png\",\"alt\":\"九龙戏珠，中间写着大奇奇生日快乐！\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"18\",{\"href\":\"/cover/f0f11682-e784-4ee6-ae67-e80dfdec0739\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/f0f11682-e784-4ee6-ae67-e80dfdec0739.png\",\"alt\":\"原神胡桃洛丽塔裙\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"19\",{\"href\":\"/cover/0ca4c293-29ea-4ece-a3c7-0ab61d29193f\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/0ca4c293-29ea-4ece-a3c7-0ab61d29193f.png\",\"alt\":\"云想衣裳花想容，春风拂槛露华浓。若非群玉山头见，会向瑶台月下逢\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"20\",{\"href\":\"/cover/67b67b4d-6aa6-4fd4-aacf-70ba2cd61829\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/67b67b4d-6aa6-4fd4-aacf-70ba2cd61829.png\",\"alt\":\"狗狗坐上火箭飞向月球\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"21\",{\"href\":\"/cover/9374e5f1-d325-4319-86ad-ee7c4fe49cb2\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/9374e5f1-d325-4319-86ad-ee7c4fe49cb2.png\",\"alt\":\"中秋，天上明月，思亲\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"22\",{\"href\":\"/cover/67f61b7a-47cb-4780-90db-d191883694fe\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/67f61b7a-47cb-4780-90db-d191883694fe.png\",\"alt\":\"二次元美少女\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"23\",{\"href\":\"/cover/b578dce8-0933-4664-86ff-19a29d1895bd\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/b578dce8-0933-4664-86ff-19a29d1895bd.png\",\"alt\":\"恭喜\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"24\",{\"href\":\"/cover/fe6fd656-898b-415b-91c5-8d670c31bc69\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/fe6fd656-898b-415b-91c5-8d670c31bc69.png\",\"alt\":\"芝麻开门红包封面\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"25\",{\"href\":\"/cover/2bba1cdd-50c4-405f-91af-552680b3a3df\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/2bba1cdd-50c4-405f-91af-552680b3a3df.png\""])</script>
+    <script>self.__next_f.push([1, ",\"alt\":\"小女孩\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"26\",{\"href\":\"/cover/36d4d8c0-1853-4523-9f2f-7dbe5806904b\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/36d4d8c0-1853-4523-9f2f-7dbe5806904b.png\",\"alt\":\"黑猫辟邪!厄运退退退!\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"27\",{\"href\":\"/cover/03bc23c6-c119-4d61-8423-ccf02b6fab85\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/03bc23c6-c119-4d61-8423-ccf02b6fab85.png\",\"alt\":\"Jadilah seperti ahli yang dapat mengerti dengan pesan saya. Saya ingin membuat gambar Seorang lelaki yang memegang pedang dan tombak serta dengan tamengnya \",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"28\",{\"href\":\"/cover/dfd41a39-f016-4126-a44c-99524b5db33b\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/dfd41a39-f016-4126-a44c-99524b5db33b.png\",\"alt\":\"loopy\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"29\",{\"href\":\"/cover/a2ead150-e42f-4f67-822e-516f544a585b\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/a2ead150-e42f-4f67-822e-516f544a585b.png\",\"alt\":\"小漠\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"30\",{\"href\":\"/cover/e47e6370-adc9-45da-b7b0-5956cf7f088b\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/e47e6370-adc9-45da-b7b0-5956cf7f088b.png\",\"alt\":\"老虎和龙\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"31\",{\"href\":\"/cover/6f1c9218-e1ff-44fd-a42f-e034c11a64af\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/6f1c9218-e1ff-44fd-a42f-e034c11a64af.png\",\"alt\":\"悟空\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"32\",{\"href\":\"/cover/72ce7e89-a522-4c04-bd0b-f3fc49518c6e\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/72ce7e89-a522-4c04-bd0b-f3fc49518c6e.png\",\"alt\":\"赛博朋克风格的女孩在玩计算机\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"33\",{\"href\":\"/cover/c82e3f07-c5a8-463d-99a9-03afed9e8784\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/c82e3f07-c5a8-463d-99a9-03afed9e8784.png\",\"alt\":\"相亲相爱一家人\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"34\",{\"href\":\"/cover/942f3905-f338-4e69-ab3c-16a817e05ee6\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/942f3905-f338-4e69-ab3c-16a817e05ee6.png\",\"alt\":\"el rostro de cristo\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"ab"])</script>
+    <script>self.__next_f.push([1, "solute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"35\",{\"href\":\"/cover/eef49dcb-1e70-46c6-acf4-cb14272ce37b\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/eef49dcb-1e70-46c6-acf4-cb14272ce37b.png\",\"alt\":\"林猪猪\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"36\",{\"href\":\"/cover/73bc32cd-67cd-443a-8fb6-7f5aa6ffcc6b\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/73bc32cd-67cd-443a-8fb6-7f5aa6ffcc6b.png\",\"alt\":\"蜡笔小新\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"37\",{\"href\":\"/cover/e96d7663-1abe-44d0-badf-7fda4d21b49c\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/e96d7663-1abe-44d0-badf-7fda4d21b49c.png\",\"alt\":\"中秋\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"38\",{\"href\":\"/cover/db018df4-4550-49b7-b3e5-d03dceaab0f6\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/db018df4-4550-49b7-b3e5-d03dceaab0f6.png\",\"alt\":\"宝宝\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"39\",{\"href\":\"/cover/a6771cf1-853e-49bb-9196-3a91879754a9\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/a6771cf1-853e-49bb-9196-3a91879754a9.png\",\"alt\":\"一个老爷爷，坐在地上，身在一片果园，周围围满了苹果\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"40\",{\"href\":\"/cover/300856e3-dd27-4323-8f72-c3cb3f9626f5\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/300856e3-dd27-4323-8f72-c3cb3f9626f5.png\",\"alt\":\"视错觉元素，山，丛林\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"41\",{\"href\":\"/cover/3a14b6b1-4732-4fb4-bdf6-e2b06324023f\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/3a14b6b1-4732-4fb4-bdf6-e2b06324023f.png\",\"alt\":\"小笼包\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"42\",{\"href\":\"/cover/fd5f699a-4420-40ad-a4d2-5bfa35d96c00\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/fd5f699a-4420-40ad-a4d2-5bfa35d96c00.png\",\"alt\":\"女生\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"43\",{\"href\":\"/cover/92369cc5-8fe5-4f85-8b76-d98278876fbb\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/92369cc5-8fe5-4f85-8b76-d98278876fbb.png\",\"alt\":\"七夕快乐\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"44\",{\"href\":\"/cover/93de2747-3e46-4061-bca3-6dfbb64c525b\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/93de2747-3e46-4061-bca3-6dfbb6"])</script>
+    <script>self.__next_f.push([1, "4c525b.png\",\"alt\":\"那朵花\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"45\",{\"href\":\"/cover/7ccff5b8-208b-41f8-86e1-8161a51cdd37\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/7ccff5b8-208b-41f8-86e1-8161a51cdd37.png\",\"alt\":\"离离原上草\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"46\",{\"href\":\"/cover/7c4ce077-4a3c-429b-a1bd-8b3aa2086b54\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/7c4ce077-4a3c-429b-a1bd-8b3aa2086b54.png\",\"alt\":\"娜美\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"47\",{\"href\":\"/cover/506a60e0-b8f9-4f7c-bf5e-70a4a0e39e3c\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/506a60e0-b8f9-4f7c-bf5e-70a4a0e39e3c.png\",\"alt\":\"ลิง\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"48\",{\"href\":\"/cover/8c97acfe-21c1-427e-99e8-8d179d562961\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/8c97acfe-21c1-427e-99e8-8d179d562961.png\",\"alt\":\"一个穿黑丝的美女\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"49\",{\"href\":\"/cover/4fc5f446-3ab5-4b76-8bb9-16776237d29c\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/4fc5f446-3ab5-4b76-8bb9-16776237d29c.png\",\"alt\":\"中大奖的红包封面\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"50\",{\"href\":\"/cover/a16da96c-5193-4d48-b362-59e3d917ce2f\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/a16da96c-5193-4d48-b362-59e3d917ce2f.png\",\"alt\":\"土地公\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"51\",{\"href\":\"/cover/011aa50a-cf02-48e4-8a61-9c6499a83d56\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/011aa50a-cf02-48e4-8a61-9c6499a83d56.png\",\"alt\":\"土地公\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"52\",{\"href\":\"/cover/3cca06b5-a7b9-4d5d-ba1b-d4508fd45f40\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/3cca06b5-a7b9-4d5d-ba1b-d4508fd45f40.png\",\"alt\":\"中国少年合唱比赛第一名\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"53\",{\"href\":\"/cover/01a42037-4e90-4f91-b5ef-3f9eca1a5f8c\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/01a42037-4e90-4f91-b5ef-3f9eca1a5f8c.png\",\"alt\":\"科技感十足的赛博朋克人\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"54\",{\"href\":\"/cover/da447228-42bc-4fe3-9ac1-8f3d43e27bf8\",\"className\":\"relative ov"])</script>
+    <script>self.__next_f.push([1, "erflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/da447228-42bc-4fe3-9ac1-8f3d43e27bf8.png\",\"alt\":\"四只可爱的大熊猫打麻将\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"55\",{\"href\":\"/cover/1a9b6210-19df-4279-8662-1cee686151fb\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/1a9b6210-19df-4279-8662-1cee686151fb.png\",\"alt\":\"龙年大吉\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"56\",{\"href\":\"/cover/8623cb26-98f1-4e8d-8f3a-2075858ba700\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/8623cb26-98f1-4e8d-8f3a-2075858ba700.png\",\"alt\":\"英语语法培训\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"57\",{\"href\":\"/cover/b8ea7beb-1b2e-4f03-8e9c-08a7737d180f\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/b8ea7beb-1b2e-4f03-8e9c-08a7737d180f.png\",\"alt\":\"美女\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"58\",{\"href\":\"/cover/90e72a3e-665b-4061-8bdb-010cf9e8a1ce\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/90e72a3e-665b-4061-8bdb-010cf9e8a1ce.png\",\"alt\":\"花朵\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}],[\"$\",\"a\",\"59\",{\"href\":\"/cover/516fc628-45f5-433d-82bf-9428879dbaa8\",\"className\":\"relative overflow-hidden max-w-[280px] mx-auto cursor-pointer\",\"children\":[[\"$\",\"$L12\",null,{\"src\":\"https://r2.trys.ai/covers/516fc628-45f5-433d-82bf-9428879dbaa8.png\",\"alt\":\"happy dog\",\"width\":\"280\",\"height\":\"420\",\"className\":\"w-full rounded-lg\"}],[\"$\",\"img\",null,{\"src\":\"/hb_bottom.png\",\"className\":\"absolute bottom-0\",\"alt\":\"\"}]]}]]}],false]}]}]\n"])</script>
+    <script>self.__next_f.push([1, "f:[\"$\",\"section\",null,{\"className\":\"max-w-3xl mx-auto text-center\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"text-3xl md:text-6xl font-bold text-primary mt-8 md:mt-24\",\"children\":\"新年快乐，龙年大吉🐲\"}],[\"$\",\"h2\",null,{\"className\":\"text-2xl md:text-4xl my-8 text-secondary-foreground\",\"children\":[[\"$\",\"span\",null,{\"className\":\"text-primary\",\"children\":4418}],\" 张使用 AI 生成的红包封面\"]}]]}]\n"])</script>
+    <script>self.__next_f.push([1, ""])</script><next-route-announcer style="position: absolute;"></next-route-announcer>
+    <div id="clerk-components"></div>
+</body>
+
+</html>

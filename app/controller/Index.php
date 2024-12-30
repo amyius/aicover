@@ -1,17 +1,58 @@
 <?php
+
 namespace app\controller;
 
 use app\BaseController;
+use app\model\User;
+use think\facade\Session;
 
 class Index extends BaseController
 {
     public function index()
     {
-        return '<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} a{color:#2E5CD5;cursor: pointer;text-decoration: none} a:hover{text-decoration:underline; } body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px;} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.6em; font-size: 42px }</style><div style="padding: 24px 48px;"> <h1>:) </h1><p> ThinkPHP V' . \think\facade\App::version() . '<br/><span style="font-size:30px;">16载初心不改 - 你值得信赖的PHP框架</span></p><span style="font-size:25px;">[ V6.0 版本由 <a href="https://www.yisu.com/" target="yisu">亿速云</a> 独家赞助发布 ]</span></div><script type="text/javascript" src="https://e.topthink.com/Public/static/client.js"></script><think id="ee9b1aa918103c4fc"></think>';
+        return view('index');
     }
 
-    public function hello($name = 'ThinkPHP6')
+    public function detail()
     {
-        return 'hello,' . $name;
+        return view('detail');
+    }
+    //登录
+    public function login()
+    {
+        $query = $this->request->param();
+        if (empty($query['password']) || empty($query['name'])) {
+            return view('login', ['error' => '参数错误']);
+        }
+        $user = User::where('name', $query['name'])->find();
+
+        if ($user && password_verify($user->password, $query['password'])) {
+
+            Session::set('user_id', $user->id);
+            return view('login', ['success' => '登录成功', 'code' => 1]);
+        } else {
+            return view('login', ['error' => '用户名或密码错误']);
+        }
+    }
+    //注册
+    public function register()
+    {
+        if ($this->request->isPost()) {
+            // 接收表单数据
+            $data = $this->request->post();
+            if (empty($data['name']) || empty($data['password'])) {
+                return view('register', ['error' => '参数错误']);
+            }
+
+            $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+            $userModel = new \app\model\User();
+            if ($userModel->save($data)) {
+                return view('register', ['success' => '注册成功', 'code' => 1]);
+            } else {
+                return view('register', ['error' => '注册失败，请稍后再试', 'code' => 0]);
+            }
+        }
+
+        return view('register');
     }
 }

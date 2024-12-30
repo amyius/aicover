@@ -10,8 +10,14 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-Route::get('think', function () {
-    return 'hello,ThinkPHP6!';
+Route::group('', function () {
+    Route::get('', 'Index/index');
+    Route::get('/login', 'Index/login');
+    Route::get('/register', 'Index/register');
+    Route::get('/detail', 'Index/detail');
 });
 
-Route::get('hello/:name', 'index/hello');
+// http://dev.aicovers.com/aicover/aicover
+Route::group('aicover', function () {
+    Route::get('/aicover', 'Aicover/aicover');
+});
